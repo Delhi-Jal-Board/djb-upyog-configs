@@ -451,39 +451,40 @@ serviceMaps:
 
         - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
 
+
     - query: INSERT INTO eg_ws_due_verification(kno, applicationno, tenantid, fullname, fulladdress, dueamount, totalamount, createdby, lastmodifiedby, createdtime, lastmodifiedtime)
-              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-              ON CONFLICT (kno) DO UPDATE SET
-                applicationno    = EXCLUDED.applicationno,
-                fullname         = EXCLUDED.fullname,
-                fulladdress      = EXCLUDED.fulladdress,
-                dueamount        = EXCLUDED.dueamount,
-                totalamount      = EXCLUDED.totalamount,
-                lastmodifiedby   = EXCLUDED.lastmodifiedby,
-                lastmodifiedtime = EXCLUDED.lastmodifiedtime;
-      basePath: $.WaterConnection.dueVerification.*
-      jsonMaps:
-        - jsonPath: $.WaterConnection.dueVerification.*.kno
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT (kno) DO UPDATE SET
+                  applicationno    = EXCLUDED.applicationno,
+                  fullname         = EXCLUDED.fullname,
+                  fulladdress      = EXCLUDED.fulladdress,
+                  dueamount        = EXCLUDED.dueamount,
+                  totalamount      = EXCLUDED.totalamount,
+                  lastmodifiedby   = EXCLUDED.lastmodifiedby,
+                  lastmodifiedtime = EXCLUDED.lastmodifiedtime;
+          basePath: $.WaterConnection.dueVerification.*
+          jsonMaps:
+            - jsonPath: $.WaterConnection.dueVerification.*.kno
 
-        - jsonPath: $.WaterConnection.applicationNo
+            - jsonPath: $.WaterConnection.applicationNo
 
-        - jsonPath: $.WaterConnection.tenantId
+            - jsonPath: $.WaterConnection.tenantId
 
-        - jsonPath: $.WaterConnection.dueVerification.*.fullName
+            - jsonPath: $.WaterConnection.dueVerification.*.fullName
 
-        - jsonPath: $.WaterConnection.dueVerification.*.fullAddress
+            - jsonPath: $.WaterConnection.dueVerification.*.fullAddress
 
-        - jsonPath: $.WaterConnection.dueVerification.*.dueAmount
+            - jsonPath: $.WaterConnection.dueVerification.*.dueAmount
 
-        - jsonPath: $.WaterConnection.dueVerification.*.totalAmount
+            - jsonPath: $.WaterConnection.dueVerification.*.totalAmount
 
-        - jsonPath: $.WaterConnection.auditDetails.createdBy
+            - jsonPath: $.WaterConnection.auditDetails.createdBy
 
-        - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
+            - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
-        - jsonPath: $.WaterConnection.auditDetails.createdTime
+            - jsonPath: $.WaterConnection.auditDetails.createdTime
 
-        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
+            - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
 
  - version: 1.0
    name: WaterConnection
