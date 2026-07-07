@@ -484,6 +484,32 @@ serviceMaps:
         - jsonPath: $.WaterConnection.auditDetails.createdTime
 
         - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
+    - query: INSERT INTO eg_ws_inspection_information(applicationno, inspection_type, inspection_date, inspector_name, createdby, createdtime, lastmodifiedby, lastmodifiedtime)
+              VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+              ON CONFLICT (applicationno) DO UPDATE SET
+                inspection_type  = EXCLUDED.inspection_type,
+                inspection_date  = EXCLUDED.inspection_date,
+                inspector_name   = EXCLUDED.inspector_name,
+                lastmodifiedby   = EXCLUDED.lastmodifiedby,
+                lastmodifiedtime = EXCLUDED.lastmodifiedtime;
+      basePath: $.WaterConnection
+      jsonMaps:
+      
+        - jsonPath: $.WaterConnection.applicationNo
+
+        - jsonPath: $.WaterConnection.inspectionInformation.inspectionType.code
+
+        - jsonPath: $.WaterConnection.inspectionInformation.inspectionDate
+
+        - jsonPath: $.WaterConnection.inspectionInformation.inspectorName
+
+        - jsonPath: $.WaterConnection.auditDetails.createdBy
+
+        - jsonPath: $.WaterConnection.auditDetails.createdTime
+
+        - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
+
+        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
 
  - version: 1.0
    name: WaterConnection
