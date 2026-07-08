@@ -451,7 +451,7 @@ serviceMaps:
 
         - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
 
-    - query: INSERT INTO eg_ws_due_verification(kno, applicationno, tenantid, fullname, fulladdress, dueamount, totalamount, createdby, lastmodifiedby, createdtime, lastmodifiedtime)
+    - query: INSERT INTO eg_ws_due_verification(kno, applicationno, tenantid, fullname, fulladdress, dueamount, totalamount, remarks, createdby, lastmodifiedby, createdtime, lastmodifiedtime)
               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
               ON CONFLICT (kno) DO UPDATE SET
                 applicationno    = EXCLUDED.applicationno,
@@ -476,6 +476,8 @@ serviceMaps:
         - jsonPath: $.WaterConnection.dueVerification.*.dueAmount
 
         - jsonPath: $.WaterConnection.dueVerification.*.totalAmount
+
+        - jsonPath: $.WaterConnection.dueVerification.*.remarks
 
         - jsonPath: $.WaterConnection.auditDetails.createdBy
 
