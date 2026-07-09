@@ -417,50 +417,19 @@ serviceMaps:
           - jsonPath: $.WaterConnection.roadCuttingInfo.*.auditDetails.lastModifiedBy
 
           - jsonPath: $.WaterConnection.roadCuttingInfo.*.auditDetails.lastModifiedTime
-    - query: INSERT INTO eg_ws_due_verification(kno, applicationno, tenantid, fullname, fulladdress, dueamount, totalamount, createdby, lastmodifiedby, createdtime, lastmodifiedtime)
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-             ON CONFLICT (kno) DO UPDATE SET
-               applicationno    = EXCLUDED.applicationno,
-               fullname         = EXCLUDED.fullname,
-               fulladdress      = EXCLUDED.fulladdress,
-               dueamount        = EXCLUDED.dueamount,
-               totalamount      = EXCLUDED.totalamount,
-               lastmodifiedby   = EXCLUDED.lastmodifiedby,
-               lastmodifiedtime = EXCLUDED.lastmodifiedtime;
-      basePath: $.WaterConnection.dueVerification.*
-      jsonMaps:
-        - jsonPath: $.WaterConnection.dueVerification.*.kno
-
-        - jsonPath: $.WaterConnection.applicationNo
-
-        - jsonPath: $.WaterConnection.tenantId
-
-        - jsonPath: $.WaterConnection.dueVerification.*.fullName
-
-        - jsonPath: $.WaterConnection.dueVerification.*.fullAddress
-
-        - jsonPath: $.WaterConnection.dueVerification.*.dueAmount
-
-        - jsonPath: $.WaterConnection.dueVerification.*.totalAmount
-
-        - jsonPath: $.WaterConnection.auditDetails.createdBy
-
-        - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
-
-        - jsonPath: $.WaterConnection.auditDetails.createdTime
-
-        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
 
     - query: INSERT INTO eg_ws_due_verification(kno, applicationno, tenantid, fullname, fulladdress, dueamount, totalamount, remarks, createdby, lastmodifiedby, createdtime, lastmodifiedtime)
-              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
               ON CONFLICT (kno) DO UPDATE SET
                 applicationno    = EXCLUDED.applicationno,
                 fullname         = EXCLUDED.fullname,
                 fulladdress      = EXCLUDED.fulladdress,
                 dueamount        = EXCLUDED.dueamount,
                 totalamount      = EXCLUDED.totalamount,
+                remarks          = EXCLUDED.remarks,
                 lastmodifiedby   = EXCLUDED.lastmodifiedby,
                 lastmodifiedtime = EXCLUDED.lastmodifiedtime;
+                
       basePath: $.WaterConnection.dueVerification.*
       jsonMaps:
         - jsonPath: $.WaterConnection.dueVerification.*.kno
@@ -494,7 +463,7 @@ serviceMaps:
                 inspector_name   = EXCLUDED.inspector_name,
                 lastmodifiedby   = EXCLUDED.lastmodifiedby,
                 lastmodifiedtime = EXCLUDED.lastmodifiedtime;
-      basePath: $.WaterConnection
+      basePath: $.WaterConnection.inspectionInformation
       jsonMaps:
       
         - jsonPath: $.WaterConnection.applicationNo
