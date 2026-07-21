@@ -73,7 +73,7 @@ serviceMaps:
 
 
 
-    - query: INSERT INTO eg_pt_property (id, propertyid, plotid, tenantid, surveyid, accountid, oldpropertyid, status, acknowldgementnumber, propertytype, ownershipcategory, usagecategory, creationreason, nooffloors, landarea, superbuiltuparea, linkedproperties, source,  channel, createdby, createdtime, lastmodifiedby, lastmodifiedtime, additionaldetails) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_pt_property (id, propertyid, plotid, tenantid, surveyid, accountid, oldpropertyid, status, acknowldgementnumber, propertytype, ownershipcategory, usagecategory, creationreason, nooffloors, landarea, superbuiltuparea, fararea, numberofrooms, numberofbeds, numberofstudents, linkedproperties, source,  channel, createdby, createdtime, lastmodifiedby, lastmodifiedtime, additionaldetails) VALUES (?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
       basePath: Property
       jsonMaps:
 
@@ -108,6 +108,14 @@ serviceMaps:
       - jsonPath: $.Property.landArea
 
       - jsonPath: $.Property.superBuiltUpArea
+
+      - jsonPath: $.Property.farArea
+
+      - jsonPath: $.Property.numberOfRooms
+
+      - jsonPath: $.Property.numberOfBeds
+
+      - jsonPath: $.Property.numberOfStudents
 
       - jsonPath: $.Property.linkedProperties
         type: ARRAY
@@ -383,7 +391,7 @@ serviceMaps:
         type: JSON
         dbType: JSONB
 
-    - query: UPDATE eg_pt_property SET propertyid=?,  surveyid=?, accountid=?, oldpropertyid=?, status=?, propertytype=?, ownershipcategory=?, usagecategory=?, nooffloors=?, landarea=?,   superbuiltuparea=?, linkedproperties=?, lastmodifiedby=?, lastmodifiedtime=?, additionaldetails=? WHERE Id=? AND tenantId=?;
+    - query: UPDATE eg_pt_property SET propertyid=?,  surveyid=?, accountid=?, oldpropertyid=?, status=?, propertytype=?, ownershipcategory=?, usagecategory=?, nooffloors=?, landarea=?,   superbuiltuparea=?, fararea=?, numberofrooms=?, numberofbeds=?, numberofstudents=?, linkedproperties=?, lastmodifiedby=?, lastmodifiedtime=?, additionaldetails=? WHERE Id=? AND tenantId=?;
       basePath: Property
       jsonMaps:
 
@@ -408,6 +416,14 @@ serviceMaps:
       - jsonPath: $.Property.landArea
 
       - jsonPath: $.Property.superBuiltUpArea
+
+      - jsonPath: $.Property.farArea
+
+      - jsonPath: $.Property.numberOfRooms
+
+      - jsonPath: $.Property.numberOfBeds
+
+      - jsonPath: $.Property.numberOfStudents
 
       - jsonPath: $.Property.linkedProperties
 
