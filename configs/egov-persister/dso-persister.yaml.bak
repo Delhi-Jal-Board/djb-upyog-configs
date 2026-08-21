@@ -37,7 +37,7 @@ serviceMaps:
           - jsonPath: $.vendor.auditDetails.lastModifiedTime
 
 
-       - query: INSERT INTO public.eg_vendor_address(id, tenantid, doorno, plotno, landmark, city, district, region, state, country, locality, pincode, additionalDetails, buildingname, street, vendor_id, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+       - query: INSERT INTO public.eg_vendor_address(id, tenantid, doorno, plotno, landmark, city, district, region, state, country, locality, pincode, additionalDetails, buildingname, street, vendor_id, createdby, lastmodifiedby, createdtime, lastmodifiedtime, latitude, longitude, sub_locality, actual_assembly, actual_zone, actual_ward, address_line_1, address_line_2, assembly, block, "zone") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: vendor.address
          jsonMaps:
           - jsonPath: $.vendor.address.id
@@ -82,6 +82,17 @@ serviceMaps:
 
           - jsonPath: $.vendor.address.auditDetails.lastModifiedTime
 
+          - jsonPath: $.vendor.address.latitude
+          - jsonPath: $.vendor.address.longitude
+          - jsonPath: $.vendor.address.subLocality
+          - jsonPath: $.vendor.address.actualAssembly
+          - jsonPath: $.vendor.address.actualZone
+          - jsonPath: $.vendor.address.actualWard
+          - jsonPath: $.vendor.address.addressLine1
+          - jsonPath: $.vendor.address.addressLine2
+          - jsonPath: $.vendor.address.assembly
+          - jsonPath: $.vendor.address.block
+          - jsonPath: $.vendor.address.zone
 
 
        - query: INSERT INTO eg_vendor_driver(  vendor_id, driver_id) VALUES ( ?, ?);
