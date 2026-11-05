@@ -256,7 +256,7 @@ serviceMaps:
       - jsonPath: $.Property.auditDetails.lastModifiedTime
 
 
-    - query: INSERT INTO eg_pt_address(tenantid, id, propertyid, doorno, plotno, buildingname, street, landmark, city, pincode, locality, district, region, state, country, latitude, longitude, createdby, createdtime, lastmodifiedby, lastmodifiedtime, additionaldetails, zro_location,sub_locality,actual_ward, actual_zone, actual_assembly, address_line_1, address_line_2, assembly, block, zone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_pt_address(tenantid, id, propertyid, doorno, plotno, buildingname, street, landmark, city, pincode, locality, district, region, state, country, latitude, longitude, createdby, createdtime, lastmodifiedby, lastmodifiedtime, additionaldetails, zro_location,sub_locality,actual_ward, actual_zone, actual_assembly, address_line_1, address_line_2, assembly, block, zone, colony_mcd_category) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
       basePath: Property.address
       jsonMaps:
 
@@ -325,6 +325,8 @@ serviceMaps:
       - jsonPath: $.Property.address.block
       
       - jsonPath: $.Property.address.zone
+
+      - jsonPath: $.Property.address.colonyMcdCategory
 
     - query: INSERT INTO eg_pt_unit(id, tenantid, propertyid, floorno, unittype, usagecategory, occupancytype, occupancydate, carpetarea, builtuparea, plintharea, superbuiltuparea, arv, constructiontype, constructiondate, dimensions, active, createdby, createdtime, lastmodifiedby, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
       basePath: Property.units.*
@@ -524,7 +526,7 @@ serviceMaps:
 
       - jsonPath: $.Property.auditDetails.lastModifiedTime
 
-    - query: UPDATE eg_pt_address SET doorno=?, plotno=?, buildingname=?, street=?, landmark=?, city=?, pincode=?, locality=?, district=?, region=?, state=?, country=?, latitude=?, longitude=?, lastmodifiedby=?, lastmodifiedtime=?, additionaldetails=?, zro_location=?, sub_locality=?, actual_ward=?, actual_zone=?, actual_assembly=?, address_line_1=?, address_line_2=?, assembly=?, block=?, zone=? WHERE id=?;
+    - query: UPDATE eg_pt_address SET doorno=?, plotno=?, buildingname=?, street=?, landmark=?, city=?, pincode=?, locality=?, district=?, region=?, state=?, country=?, latitude=?, longitude=?, lastmodifiedby=?, lastmodifiedtime=?, additionaldetails=?, zro_location=?, sub_locality=?, actual_ward=?, actual_zone=?, actual_assembly=?, address_line_1=?, address_line_2=?, assembly=?, block=?, zone=?, colony_mcd_category=? WHERE id=?;
       basePath: Property.address
       jsonMaps:
 
@@ -583,6 +585,8 @@ serviceMaps:
       - jsonPath: $.Property.address.block
 
       - jsonPath: $.Property.address.zone
+
+      - jsonPath: $.Property.address.colonyMcdCategory
 
       - jsonPath: $.Property.address.id
 
