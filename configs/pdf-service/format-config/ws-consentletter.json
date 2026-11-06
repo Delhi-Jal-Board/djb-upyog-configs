@@ -1,0 +1,141 @@
+{
+  "key": "ws-consentletter",
+  "config": {
+    "pageSize": "A4",
+    "pageMargins": [40, 40, 40, 40],
+    "watermark": {
+      "text": "DELHI JAL BOARD",
+      "color": "#004085",
+      "opacity": 0.08,
+      "bold": true,
+      "italics": false
+    },
+    "defaultStyle": {
+      "fontSize": 10,
+      "color": "#333333",
+      "lineHeight": 1.3
+    },
+    "content": [
+      {
+        "text": "DELHI JAL BOARD",
+        "style": "mainHeader"
+      },
+      {
+        "text": "INFORMATION NOTICE - NEW CONNECTION & METER INSTALLATION",
+        "style": "subHeader"
+      },
+      {
+        "canvas": [{ "type": "line", "x1": 0, "y1": 5, "x2": 515, "y2": 5, "lineWidth": 1.5, "lineColor": "#004085" }]
+      },
+      {
+        "text": "Subject: Information Regarding New Connection and Meter Installation",
+        "style": "subjectStyle",
+        "margin": [0, 15, 0, 8]
+      },
+      {
+        "text": "Dear Consumer,",
+        "bold": true,
+        "margin": [0, 0, 0, 6]
+      },
+      {
+        "text": "This is to inform you that your New Water Connection has been processed by Delhi Jal Board. The details of the new connection and the authorized/licensed plumber assigned for meter installation are provided below.",
+        "margin": [0, 0, 0, 12]
+      },
+      {
+        "text": "New Connection Details",
+        "style": "sectionHeader"
+      },
+      {
+        "table": {
+          "widths": ["40%", "60%"],
+          "body": [
+            [{ "text": "Application / Connection No.:", "bold": true }, "{{applicationNo}}"],
+            [{ "text": "Consumer Name:", "bold": true }, "{{consumerName}}"],
+            [{ "text": "Address:", "bold": true }, "{{consumerAddress}}"],
+            [{ "text": "Zone:", "bold": true }, "{{zone}}"],
+            [{ "text": "ZRO Office:", "bold": true }, "{{zro}}"],
+            [{ "text": "Connection Type:", "bold": true }, "{{connectionType}}"],
+            [{ "text": "Connection Approval Date:", "bold": true }, "{{approvalDate}}"],
+            [{ "text": "Meter Installation Timeline Date:", "bold": true }, "{{installationDate}}"]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [0, 0, 0, 15]
+      },
+      {
+        "text": "Licensed Plumber Details",
+        "style": "sectionHeader"
+      },
+      {
+        "text": "The consumer is requested to get the water meter installed through the following Delhi Jal Board licensed plumber:",
+        "margin": [0, 0, 0, 6]
+      },
+      {
+        "table": {
+          "widths": ["40%", "60%"],
+          "body": [
+            [{ "text": "Plumber Name:", "bold": true }, "{{plumberName}}"],
+            [{ "text": "Plumber Company Name:", "bold": true }, "{{plumberCompany}}"],
+            [{ "text": "Mobile Number:", "bold": true }, "{{plumberMobile}}"],
+            [{ "text": "Licence / Registration No.:", "bold": true }, "{{plumberLicense}}"]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [0, 0, 0, 6]
+      },
+      {
+        "text": "The above-mentioned licensed plumber is authorized/assigned to carry out the meter installation for the new connection.",
+        "italics": true,
+        "margin": [0, 0, 0, 15]
+      },
+      {
+        "text": "Important Information for the Consumer",
+        "style": "sectionHeader"
+      },
+      {
+        "ol": [
+          "Please coordinate with the above-mentioned licensed plumber for installation of the meter at the approved new connection premises.",
+          "Please verify the name and identity of the licensed plumber before allowing the meter installation activity.",
+          "The meter should be installed at the approved location as per Delhi Jal Board requirements.",
+          "The consumer is requested to ensure that the meter number and initial meter reading are properly recorded after installation.",
+          "The consumer should retain the meter installation details and relevant photographs/documents for future reference.",
+          "In case of any discrepancy regarding the assigned plumber or meter installation, please contact the concerned ZRO / Delhi Jal Board office before proceeding with the installation."
+        ],
+        "margin": [0, 0, 0, 15]
+      },
+      {
+        "text": "For any clarification regarding the new connection or meter installation, the consumer may contact the concerned Delhi Jal Board office.",
+        "margin": [0, 0, 0, 12]
+      },
+      {
+        "text": "Regards,\nDelhi Jal Board",
+        "bold": true
+      }
+    ],
+    "styles": {
+      "mainHeader": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "color": "#004085"
+      },
+      "subHeader": {
+        "fontSize": 11,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 3, 0, 6]
+      },
+      "subjectStyle": {
+        "fontSize": 11,
+        "bold": true,
+        "color": "#111111"
+      },
+      "sectionHeader": {
+        "fontSize": 11,
+        "bold": true,
+        "color": "#004085",
+        "margin": [0, 6, 0, 6]
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "key": "ws-consentletter",
+  "DataConfigs": {
+    "serviceName": "ws-services",
+    "version": "1.0.0",
+    "baseKeyPath": "$.WaterConnection.*",
+    "entityIdPath": "$.applicationNo",
+    "mappings": [
+      {
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "applicationNo",
+                "value": { "path": "$.applicationNo" }
+              },
+              {
+                "variable": "consumerName",
+                "value": { "path": "$.property.owners[0].name" }
+              },
+              {
+                "variable": "consumerAddress",
+                "value": { "path": "$.property.address.doorNo" }
+              },
+              {
+                "variable": "zone",
+                "value": { "path": "$.additionalDetails.locality" }
+              },
+              {
+                "variable": "zro",
+                "value": { "path": "$.additionalDetails.zroOffice" }
+              },
+              {
+                "variable": "connectionType",
+                "value": { "path": "$.additionalDetails.connectionType" }
+              },
+              {
+                "variable": "approvalDate",
+                "value": { "path": "$.approvalDate" }
+              },
+              {
+                "variable": "installationDate",
+                "value": { "path": "$.meterInstallationDate" }
+              },
+              {
+                "variable": "plumberName",
+                "value": { "path": "$.plumberInfo.name" }
+              },
+              {
+                "variable": "plumberCompany",
+                "value": { "path": "$.plumberInfo.agency" }
+              },
+              {
+                "variable": "plumberMobile",
+                "value": { "path": "$.plumberInfo.mobileNumber" }
+              },
+              {
+                "variable": "plumberLicense",
+                "value": { "path": "$.plumberInfo.licenceNo" }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
