@@ -1,0 +1,65 @@
+{
+  "DataConfigs": {
+    "moduleName": "ws-services",
+    "version": "1.0.0",
+    "key": "ws-disconnectionnotice",
+    "baseKeyPath": "$.WaterConnection.*",
+    "mappings": [
+      {
+        "mappings": {
+          "direct": [
+            {
+              "variable": "kno",
+              "value": "$.kno"
+            },
+            {
+              "variable": "applicationNo",
+              "value": "$.applicationNo"
+            },
+            {
+              "variable": "consumerName",
+              "value": "$.consumerName"
+            },
+            {
+              "variable": "consumerAddress",
+              "value": "$.consumerAddress"
+            },
+            {
+              "variable": "zone",
+              "value": "$.zone"
+            },
+            {
+              "variable": "zro",
+              "value": "$.zro"
+            },
+            {
+              "variable": "disconnectionDate",
+              "value": "$.disconnectionDate"
+            },
+            {
+              "variable": "disconnectionReason",
+              "value": "$.disconnectionReason"
+            },
+            {
+              "variable": "plumberName",
+              "value": "$.plumberName"
+            },
+            {
+              "variable": "plumberCompany",
+              "value": "$.plumberCompany"
+            },
+            {
+              "variable": "plumberMobile",
+              "value": "$.plumberMobile"
+            },
+            {
+              "variable": "plumberLicense",
+              "value": "$.plumberLicense"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+

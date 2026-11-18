@@ -1,0 +1,145 @@
+{
+  "key": "ws-disconnectionnotice",
+  "config": {
+    "pageSize": "A4",
+    "pageMargins": [40, 40, 40, 40],
+    "watermark": {
+      "text": "DELHI JAL BOARD",
+      "color": "#004085",
+      "opacity": 0.08,
+      "bold": true,
+      "italics": false
+    },
+    "defaultStyle": {
+      "fontSize": 10,
+      "color": "#333333",
+      "lineHeight": 1.3
+    },
+    "content": [
+      {
+        "text": "DELHI JAL BOARD",
+        "style": "mainHeader"
+      },
+      {
+        "text": "INFORMATION NOTICE - METER DISCONNECTION",
+        "style": "subHeader"
+      },
+      {
+        "canvas": [{ "type": "line", "x1": 0, "y1": 5, "x2": 515, "y2": 5, "lineWidth": 1.5, "lineColor": "#004085" }]
+      },
+      {
+        "text": "Subject: Information Regarding Meter Disconnection",
+        "style": "subjectStyle",
+        "margin": [0, 15, 0, 8]
+      },
+      {
+        "text": "Dear Consumer,",
+        "bold": true,
+        "margin": [0, 0, 0, 6]
+      },
+      {
+        "text": "This is to inform you that the following meter disconnection has been initiated as per the records of Delhi Jal Board.",
+        "margin": [0, 0, 0, 12]
+      },
+      {
+        "text": "Disconnection Details",
+        "style": "sectionHeader"
+      },
+      {
+        "table": {
+          "widths": ["40%", "60%"],
+          "body": [
+            [{ "text": "KNO / Connection No.:", "bold": true }, "{{kno}}"],
+            [{ "text": "Application No.:", "bold": true }, "{{applicationNo}}"],
+            [{ "text": "Consumer Name:", "bold": true }, "{{consumerName}}"],
+            [{ "text": "Address:", "bold": true }, "{{consumerAddress}}"],
+            [{ "text": "Zone:", "bold": true }, "{{zone}}"],
+            [{ "text": "ZRO Office:", "bold": true }, "{{zro}}"],
+            [{ "text": "Disconnection Date:", "bold": true }, "{{disconnectionDate}}"],
+            [{ "text": "Reason for Disconnection:", "bold": true }, "{{disconnectionReason}}"]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [0, 0, 0, 15]
+      },
+      {
+        "text": "Details of Licensed Plumber",
+        "style": "sectionHeader"
+      },
+      {
+        "text": "The meter disconnection is to be carried out through the following Delhi Jal Board licensed plumber:",
+        "margin": [0, 0, 0, 6]
+      },
+      {
+        "table": {
+          "widths": ["40%", "60%"],
+          "body": [
+            [{ "text": "Plumber Name:", "bold": true }, "{{plumberName}}"],
+            [{ "text": "Plumber Company Name:", "bold": true }, "{{plumberCompany}}"],
+            [{ "text": "Mobile Number:", "bold": true }, "{{plumberMobile}}"],
+            [{ "text": "Licence / Registration No.:", "bold": true }, "{{plumberLicense}}"]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [0, 0, 0, 6]
+      },
+      {
+        "text": "The consumer is requested to coordinate with the above-mentioned licensed plumber for the meter disconnection.",
+        "margin": [0, 0, 0, 15]
+      },
+      {
+        "text": "Important Instructions for the Consumer",
+        "style": "sectionHeader"
+      },
+      {
+        "text": "The consumer is requested to ensure the following:",
+        "margin": [0, 0, 0, 6]
+      },
+      {
+        "ol": [
+          "Photograph Before Disconnection:\nPlease ensure that a clear photograph of the meter and its existing condition is taken before the meter is disconnected.",
+          "Photograph After Disconnection:\nPlease ensure that a clear photograph of the meter and the disconnected connection is taken after the meter has been disconnected.",
+          "The photographs should clearly capture the meter, meter reading, meter number and surrounding connection/installation, wherever applicable.",
+          "The consumer is advised to keep the photographs for their records as proof of the condition of the meter before and after disconnection.",
+          "The consumer should verify the identity of the licensed plumber before allowing the disconnection activity to be carried out."
+        ],
+        "margin": [0, 0, 0, 15]
+      },
+      {
+        "text": "For any clarification regarding the disconnection, the consumer may contact the concerned Delhi Jal Board office.",
+        "margin": [0, 0, 0, 15]
+      },
+      {
+        "text": "Regards,\nDelhi Jal Board",
+        "bold": true,
+        "margin": [0, 10, 0, 0]
+      }
+    ],
+    "styles": {
+      "mainHeader": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "color": "#004085"
+      },
+      "subHeader": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 4, 0, 8]
+      },
+      "subjectStyle": {
+        "fontSize": 11,
+        "bold": true,
+        "color": "#004085"
+      },
+      "sectionHeader": {
+        "fontSize": 11,
+        "bold": true,
+        "color": "#004085",
+        "margin": [0, 10, 0, 6]
+      }
+    }
+  }
+}
+
