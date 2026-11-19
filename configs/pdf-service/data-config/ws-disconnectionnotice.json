@@ -1,4 +1,5 @@
 {
+  "key": "ws-disconnectionnotice",
   "DataConfigs": {
     "moduleName": "ws-services",
     "version": "1.0.0",
