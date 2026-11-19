@@ -5,6 +5,7 @@
     "version": "1.0.0",
     "key": "ws-disconnectionnotice",
     "baseKeyPath": "$.WaterConnection.*",
+    "entityIdPath": "$.applicationNo",
     "mappings": [
       {
         "mappings": {
